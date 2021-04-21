@@ -1,0 +1,99 @@
+ISO3,CODE,NAME,CONTINENT,pop,ISO2
+ARG,32,Argentina,South America,45196000,AR
+ARM,51,Armenia,Asia,2963000,AM
+AUT,40,Austria,Europe,9006000,AT
+BGD,50,Bangladesh,Asia,164689000,BD
+BLR,112,Belarus,Europe,9449000,BY
+BEN,204,Benin,Africa,12123000,BJ
+BOL,68,Bolivia,South America,11673000,BO
+BWA,72,Botswana,Africa,2352000,BW
+BRA,76,Brazil,South America,212559000,BR
+BFA,854,Burkina Faso,Africa,20903000,BF
+KHM,116,Cambodia,Asia,16719000,KH
+CMR,120,Cameroon,Africa,26546000,CM
+CAN,124,Canada,North America,37742000,CA
+CHL,152,Chile,South America,19116000,CL
+CHN,156,China,Asia,1439324000,CN
+COL,170,Colombia,South America,50883000,CO
+CRI,188,Costa Rica,North America,5094000,CR
+CUB,192,Cuba,North America,11327000,CU
+DNK,208,Denmark,Europe,5792000,DK
+DOM,214,Dominican Republic,North America,10848000,DO
+ECU,218,Ecuador,South America,17643000,EC
+EGY,818,Egypt,Africa,102334000,EG
+SLV,222,El Salvador,North America,6486000,SV
+ETH,231,Ethiopia,Africa,114964000,ET
+FJI,242,Fiji,Oceania,896000,FJ
+FRA,250,France,Europe,65274000,FR
+DEU,276,Germany,Europe,83784000,DE
+GHA,288,Ghana,Africa,31073000,GH
+GRC,300,Greece,Europe,10423000,GR
+GTM,320,Guatemala,North America,17916000,GT
+GIN,324,Guinea,Africa,13133000,GN
+HTI,332,Haiti,North America,11403000,HT
+HND,340,Honduras,North America,9905000,HN
+HUN,348,Hungary,Europe,9660000,HU
+ISL,352,Iceland,Europe,341000,IS
+IND,356,India,Asia,1380004000,IN
+IDN,360,Indonesia,Asia,273524000,ID
+IRN,364,Iran,Asia,83993000,IR
+IRQ,368,Iraq,Asia,40223000,IQ
+IRL,372,Ireland,Europe,4938000,IE
+ISR,376,Israel,Asia,8656000,IL
+ITA,380,Italy,Europe,60462000,IT
+JAM,388,Jamaica,North America,2961000,JM
+JOR,400,Jordan,Asia,10203000,JO
+KEN,404,Kenya,Africa,53771000,KE
+KGZ,417,Kyrgyz Republic,Asia,6524000,KG
+LAO,418,Laos,Asia,7276000,LA
+LSO,426,Lesotho,Africa,2142000,LS
+LBR,430,Liberia,Africa,5058000,LR
+MWI,454,Malawi,Africa,19130000,MW
+MYS,458,Malaysia,Asia,32366000,MY
+MLI,466,Mali,Africa,20251000,ML
+MEX,484,Mexico,North America,128933000,MX
+MNG,496,Mongolia,Asia,3278000,MN
+MAR,504,Morocco,Africa,36911000,MA
+MOZ,508,Mozambique,Africa,31255000,MZ
+NPL,524,Nepal,Asia,29137000,NP
+NLD,528,Netherlands,Europe,17135000,NL
+NIC,558,Nicaragua,North America,6625000,NI
+NGA,566,Nigeria,Africa,206140000,NG
+NOR,578,Norway,Europe,5421000,NO
+PAK,586,Pakistan,Asia,220892000,PK
+PSE,275,Palestine,Asia,5101000,PS
+PAN,591,Panama,North America,4315000,PA
+PNG,598,Papua New Guinea,Oceania,8947000,PG
+PRY,600,Paraguay,South America,7133000,PY
+PER,604,Peru,South America,32972000,PE
+PHL,608,Philippines,Asia,109581000,PH
+POL,616,Poland,Europe,37847000,PL
+PRT,620,Portugal,Europe,10197000,PT
+PRI,630,Puerto Rico,North America,2861000,PR
+ROU,642,Romania,Europe,19238000,RO
+RUS,643,Russia,Asia,145934000,RU
+RWA,646,Rwanda,Africa,12952000,RW
+LCA,662,Saint Lucia,North America,184000,LC
+SEN,686,Senegal,Africa,16744000,SN
+SLE,694,Sierra Leone,Africa,7977000,SL
+SVN,705,Slovenia,Europe,2079000,SI
+ZAF,710,South Africa,Africa,59309000,ZA
+SSD,728,South Sudan,Africa,11194000,SS
+ESP,724,Spain,Europe,46755000,ES
+SDN,729,Sudan,Africa,43849000,SD
+SWE,752,Sweden,Europe,10099000,SE
+CHE,756,Switzerland,Europe,8655000,CH
+TZA,834,Tanzania,Africa,59734000,TZ
+THA,764,Thailand,Asia,69800000,TH
+TGO,768,Togo,Africa,8279000,TG
+TTO,780,Trinidad and Tobago,North America,1399000,TT
+TUR,792,Turkey,Asia,84339000,TR
+UGA,800,Uganda,Africa,45741000,UG
+UKR,804,Ukraine,Europe,43734000,UA
+GBR,826,United Kingdom,Europe,67886000,GB
+USA,840,United States,North America,331003000,US
+URY,858,Uruguay,South America,3474000,UY
+VEN,862,Venezuela,South America,28436000,VE
+VNM,704,Vietnam,Asia,97339000,VN
+ZMB,894,Zambia,Africa,18384000,ZM
+ZWE,716,Zimbabwe,Africa,14863000,ZW

@@ -1,0 +1,22 @@
+/* Animations for IndividualRiskPage */
+.slide-enter {
+    transform: translateY(10%);
+    opacity: 0;
+}
+
+.slide-enter.slide-enter-active {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+}
+
+.slide-leave {
+    transform: translateY(0%);
+    opacity: 0;
+}
+
+.slide-leave.slide-leave-active {
+    transform: translateY(-10%);
+    opacity: 0;
+    transition: transform 0ms ease-in-out, opacity 0ms ease-in-out;
+}

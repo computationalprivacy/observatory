@@ -1,0 +1,52 @@
+[
+		{
+			"question": "Hi, where do you live?",
+			"title": "COUNTRY",
+			"values": []
+		},
+		{
+			"question": "Which part of your country do you live in?",
+			"title": "Home location",
+			"values": []
+		},
+		{
+			"question": "What is your birthdate?",
+			"title": "Age",
+			"values": []
+		},
+		{
+			"question": "What is your gender?",
+			"title": "Sex",
+			"values": []
+		},
+		{
+			"question": "What is your marital status?",
+			"title": "Marital status",
+			"values": []
+		},
+		{
+			"question": "How many children do you have?",
+			"title": "NO. OF CHILDREN",
+			"values": []
+		},
+		{
+			"question": "What is your religion?",
+			"title": "Religion",
+			"values": []
+		},
+		{
+			"question": "What is your race?",
+			"title": "Race",
+			"values": []
+		},
+		{
+			"question": "What is your highest attained education level?",
+			"title": "Education",
+			"values": []
+		},
+		{
+			"question": "What is your employment status?",
+			"title": "Employment",
+			"values": []
+		}
+]

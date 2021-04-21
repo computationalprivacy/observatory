@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist",
+		"target": "es5",
+		"module": "es2020",
+		"jsx": "react",
+		"allowJs": true,
+		"checkJs": false,
+		"noImplicitAny": true,
+		"allowSyntheticDefaultImports": true,
+		"sourceMap": true,
+		"moduleResolution": "node",
+		"typeRoots": [
+			"custom_types",
+			"node_modules/@types"
+		]
+	},
+	"exclude": [ "node_modules" ]
+}

@@ -1,0 +1,9 @@
+{
+    "short_name": "Observatory",
+    "name": "The Observatory of Anonymity",
+    
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#cc7722",
+    "background_color": "#ffffff"
+  }
