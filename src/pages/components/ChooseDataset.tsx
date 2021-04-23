@@ -61,7 +61,7 @@ export default class ChooseDataset extends React.Component<IProps, unknown> {
                         <Text>
                             <Text keyboard>Datasets</Text> are expected to follow
                             the CSV protocol with the first row being the header. To simply try this tool with a sample toy dataset, we provide a copy of the ADULT dataset {' '}
-                            <a href="/adult.csv">here</a>. Click on <Text keyboard>Select Dataset</Text> and upload the downloaded dataset to get started!
+							<a href="/observatory/adult.csv">here</a>. Click on <Text keyboard>Select Dataset</Text> and upload the downloaded dataset to get started!
                             <br />
                             <br />
                             The <Text keyboard>sample size</Text> represents the
