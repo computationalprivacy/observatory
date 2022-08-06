@@ -46,3 +46,23 @@ The application is currently built with the following technologies:
 GNU General Public License v3.0
 
 See LICENSE to see the full text.
+
+# To cite
+
+```
+@inproceedings{10.1145/3442442.3458606,
+author = {Rocher, Luc and Muthu, Meenatchi Sundaram and de Montjoye, Yves-Alexandre},
+title = {The Observatory of Anonymity: An Interactive Tool to Understand Re-Identification Risks in 89 Countries},
+year = {2021},
+isbn = {9781450383134},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3442442.3458606},
+doi = {10.1145/3442442.3458606},
+booktitle = {Companion Proceedings of the Web Conference 2021},
+pages = {687–689},
+numpages = {3},
+location = {Ljubljana, Slovenia},
+series = {WWW '21}
+}
+```
