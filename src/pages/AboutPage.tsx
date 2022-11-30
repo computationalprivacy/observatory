@@ -67,7 +67,7 @@ export default class AboutPage extends React.Component<RouteComponentProps, any>
                         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                             <img
                                 className="dynamicScaleImg"
-                                src="/observatory/assets/fig_anon_record.png"
+                                src="/assets/fig_anon_record.png"
                                 width="10%"
                                 style={{ objectFit: 'contain' }}
                             />
@@ -135,7 +135,7 @@ export default class AboutPage extends React.Component<RouteComponentProps, any>
                         <Title level={3} style={{ textAlign: 'center' }}>
                             Does sampling actually help?
                         </Title>
-                        <img src="/observatory/assets/fig_sampling.png" width="100%" />
+                        <img src="/assets/fig_sampling.png" width="100%" />
                         <Paragraph>
                             <b>Sampling in theory</b>: Every dot is one
                             individual. Some share your basic demographics (in
@@ -282,7 +282,7 @@ export default class AboutPage extends React.Component<RouteComponentProps, any>
                                     }
                                     bordered={false}
                                     cover={
-                                        <img src="/observatory/assets/luc-rocher.png" />
+                                        <img src="/assets/luc-rocher.png" />
                                     }>
                                     <Title level={4}>Luc Rocher</Title>
                                     Research Associate,
@@ -301,7 +301,7 @@ export default class AboutPage extends React.Component<RouteComponentProps, any>
                                     }
                                     bordered={false}
                                     cover={
-                                        <img src="/observatory/assets/julien-hendrickx.jpg" />
+                                        <img src="/assets/julien-hendrickx.jpg" />
                                     }>
                                     <Title level={4}>Julien Hendrickx</Title>
                                     Professor,
@@ -320,7 +320,7 @@ export default class AboutPage extends React.Component<RouteComponentProps, any>
                                     }
                                     bordered={false}
                                     cover={
-                                        <img src="/observatory/assets/y-a-demontjoye.png" />
+                                        <img src="/assets/y-a-demontjoye.png" />
                                     }>
                                     <Title level={4}>
                                         Yves-Alexandre de Montjoye
@@ -341,7 +341,7 @@ export default class AboutPage extends React.Component<RouteComponentProps, any>
                                     }
                                     bordered={false}
                                     cover={
-                                        <img src="/observatory/assets/meenatchi-sundaram-msa.jpg" />
+                                        <img src="/assets/meenatchi-sundaram-msa.jpg" />
                                     }>
                                     <Title level={4}>
                                         Meenatchi Sundaram MSA

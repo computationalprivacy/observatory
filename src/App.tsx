@@ -19,38 +19,38 @@ class App extends React.Component<RouteComponentProps, unknown> {
     pages = [
         {
             title: 'Home',
-            url: '/observatory',
+            url: '/',
             page: MainPage,
             has_pill: true,
         },
         {
             title: 'Try for yourself',
-            url: '/observatory/take-the-quiz/:iso3?',
-			baseUrl: '/observatory/take-the-quiz',
+            url: '/take-the-quiz/:iso3?',
+			baseUrl: '/take-the-quiz',
             page: IndividualRiskPage,
             has_pill: false,
         },
         {
             title: 'Explore anonymity',
-            url: '/observatory/explore',
+            url: '/explore',
             page: CountryReportsPage,
             has_pill: true,
         },
         {
             title: 'Analyze your data',
-            url: '/observatory/analyze-your-data',
+            url: '/analyze-your-data',
             page: ToolsPage,
             has_pill: true,
         },
         {
             title: 'Why it matters',
-            url: '/observatory/why-it-matters',
+            url: '/why-it-matters',
             page: AboutPage,
             has_pill: true,
         },
         {
             title: 'About Us',
-            url: '/observatory/why-it-matters#about-us',
+            url: '/why-it-matters#about-us',
             page: AboutPage,
             has_pill: true,
         },
@@ -117,12 +117,12 @@ class App extends React.Component<RouteComponentProps, unknown> {
                     <Row className="row-v-spacing" justify="center">
                         <Col xs={24} sm={24} md={16} lg={12}>
                             <h3>The Observatory of Anonymity</h3>
-                            <p>The Computational Privacy Group (CPG) is committed to protecting the privacy of visitors to our website. The Observatory of Anonymity does not collect nor share any personal data. All statistical computations run entirely in the browser, and no personal data is transmitted to Imperial College's servers. We only collect anonymous analytics (page URL and user agent).</p>
+                            <p>We are committed to protecting the privacy of visitors to our website. The Observatory of Anonymity does not collect nor share any personal data. All statistical computations run entirely in the browser, and no personal data is transmitted to our servers. We only collect anonymous analytics (page URL and user agent).</p>
                             <p>The source code of the Observatory is available at <a href="https://github.com/computationalprivacy/observatory">https://github.com/computationalprivacy/observatory</a> and distributed under a free license.</p>
                             <h3>Contacting us</h3>
-                            <p>Have questions, comments, or concerns? Please contact <a href="https://rocher.lc/">Luc Rocher</a> by email at: lrocher (at) imperial (dot) ac (dot) uk.</p>
+                            <p>Have questions, comments, or concerns? Please contact <a href="https://rocher.lc/">Luc Rocher</a> by email at: x@y where x=luc.rocher and y=oii.ox.ac.uk.</p>
                             <br />
-                            <a href="https://cpg.doc.ic.ac.uk/"><img src="/observatory/assets/logo-cpg-icl.png" style={{ objectFit: 'contain', maxWidth: '50%' }} /></a>
+                            <a href="https://cpg.doc.ic.ac.uk/"><img src="/assets/logo-cpg-icl.png" style={{ objectFit: 'contain', maxWidth: '50%' }} /></a>
                         </Col>
                     </Row>
                 </Footer>

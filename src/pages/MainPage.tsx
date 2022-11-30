@@ -277,7 +277,7 @@ export default class MainPage extends React.Component<unknown, IState> {
                             
                             Welcome to the Observatory of Anonymity, an interactive website to explore the research of the Computational Privacy Group at Imperial College London. Take a short quiz to find out what makes you more vulnerable to re-identification, explore anonymity in 89 countries around the world, or train our method with your own datasets.
                         </Paragraph>
-                        <Link to="/observatory/take-the-quiz">
+                        <Link to="/take-the-quiz">
                             <Button type="primary">Try for yourself</Button>
                         </Link>
                     </div>

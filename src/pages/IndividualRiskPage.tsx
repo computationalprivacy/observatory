@@ -70,7 +70,7 @@ export default class IndividualRiskPage extends React.Component<
     loadCountryModel(): void {
         const country_index = this.state.attrs[0];
         const country = this.state.countryData[country_index];
-        json(`/observatory/country_models/${country.iso3}.json`).then((data) => {
+        json(`/country_models/${country.iso3}.json`).then((data) => {
             const model = data as Model;
             const selectedHeaders = model.avail_var;
             selectedHeaders.push('COUNTRY');
@@ -144,9 +144,9 @@ export default class IndividualRiskPage extends React.Component<
             countrySelected = params.iso3;
         }
 
-        json('/observatory/risk.json').then((data) => {
+        json('/risk.json').then((data) => {
             const countryData = data as Country[];
-            json('/observatory/qns.json').then((data) => {
+            json('/qns.json').then((data) => {
                 const qnData = data as Question[];
 
                 // add choosing country to list of questions and sort by name
@@ -411,7 +411,7 @@ export default class IndividualRiskPage extends React.Component<
             return (
                 <Redirect
                     to={{
-                        pathname: '/observatory/explore',
+                        pathname: '/explore',
                         state: {
                             attrs: state.attrs.map((val) =>
                                 val == -1 ? Number.NaN : val

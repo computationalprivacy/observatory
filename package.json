@@ -2,15 +2,15 @@
 	"name": "privacy-demo",
 	"version": "2.0.0",
 	"description": "Analyze anonymized datasets using Gaussian Copula model",
-	"homepage": "/observatory/",
+	"homepage": "/",
 	"scripts": {
 		"build": "webpack --mode=production --config webpack.config.js",
 		"start": "http-server dist/",
 		"start:dev": "PUBLIC_URL=/ webpack-dev-server --mode=development --host 0.0.0.0"
 	},
 	"engines": {
-		"node": "14.x",
-		"npm": "6.x"
+		"node": "18.x",
+		"npm": "8.x"
 	},
 	"keywords": [
 		"react",

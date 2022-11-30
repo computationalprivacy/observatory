@@ -69,7 +69,7 @@ export default class CountryReportsPage extends React.Component<
 
     // read available countries & corresponding continent data from file
     componentDidMount(): void {
-        json('/observatory/risk.json').then((data) => {
+        json('/risk.json').then((data) => {
             const countryData = data as Country[];
             const continents: Record<string, Country[]> = {};
 
@@ -124,7 +124,7 @@ export default class CountryReportsPage extends React.Component<
             attrs = [];
         }
 
-        json(`/observatory/country_models/${iso3}.json`).then((data) => {
+        json(`/country_models/${iso3}.json`).then((data) => {
             const model = data as Model;
 
             // necessary variables for UniquenessData component

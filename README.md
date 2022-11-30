@@ -1,6 +1,6 @@
 # The Observatory of Anonymity
 
-Source code for the Observatory of anonymity, available online at [https://cpg.doc.ic.ac.uk/observatory/](https://cpg.doc.ic.ac.uk/observatory/).
+Source code for the Observatory of anonymity, available online at [https://ooa.world/](https://ooa.world/).
 The Observatory of Anonymity allows users to test their degree of anonymity in 89 different countries.
 
 This is a client-side only application developed in TypeScript. All the computation to run the models are done directly in the browser.
