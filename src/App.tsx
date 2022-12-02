@@ -122,7 +122,13 @@ class App extends React.Component<RouteComponentProps> {
                             <h3>Contacting us</h3>
                             <p>Have questions, comments, or concerns? Please contact <a href="https://rocher.lc/">Luc Rocher</a> by email at: x@y where x=luc.rocher and y=oii.ox.ac.uk.</p>
                             <br />
-                            <a href="https://cpg.doc.ic.ac.uk/"><img src="/assets/logo-cpg-icl.png" style={{ objectFit: 'contain', maxWidth: '50%' }} /></a>
+                            <a href="https://www.ox.ac.uk/"><img src="/assets/logo-oxford.svg" style={{ objectFit: 'contain', maxWidth: '20%', padding: '0 1em' }} /></a>
+                            <a href="https://oii.ox.ac.uk/"><img src="/assets/logo-oxford-oii.svg" style={{ objectFit: 'contain', maxWidth: '20%', padding: '0 1em' }} /></a>
+                            <a href="https://cpg.doc.ic.ac.uk/"><img src="/assets/logo-cpg-icl.png" style={{ objectFit: 'contain', maxWidth: '50%', padding: '0 1em' }} /></a>
+                            <br />
+                            <br />
+                            <h3>With support from</h3>
+                            <a href="https://ico.org.uk/"><img src="/assets/logo-ico.svg" style={{ objectFit: 'contain', maxWidth: '50%', padding: '0 1em' }} /></a>
                         </Col>
                     </Row>
                 </Footer>
