@@ -1,6 +1,6 @@
 // define utility functions for calculations
 import * as math from 'mathjs';
-var _ = require('lodash');
+import _ from 'lodash';
 import Rand from 'rand-seed';
 
 // compute cholesky decomposition for positive definite matrix
