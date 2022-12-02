@@ -167,7 +167,6 @@ export function fit_mle(
     const marginals = extract_marginals(math.transpose(data));
 
     data = choose_random(data, samples);
-    console.log(data);
     const dataT = math.transpose(data);
 
     const mi_matrix = mutual_information_matrix(dataT);

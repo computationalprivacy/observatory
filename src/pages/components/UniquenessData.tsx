@@ -16,6 +16,9 @@ const { CheckableTag } = Tag;
 
 import { CellMeasurer, CellMeasurerCache, List } from 'react-virtualized';
 
+import * as dayjs from 'dayjs';
+dayjs().format();
+
 import { GaussianCopula } from '../../model/distributions';
 import { correctness_with_prob } from '../../model/indiv_uniqueness';
 
@@ -62,7 +65,7 @@ export default class UniquenessData extends React.Component<IProps, IState> {
 
     // when birthdate is selected, choose the closest age that is present
     // (if that particular age is not present in country's dataset)
-    birthdateSelected = (date: moment.Moment, _: string): void => {
+    birthdateSelected = (date: dayjs.Dayjs, _: string): void => {
         const headerIndex = this.props.selectedHeaders.findIndex((header) => header === "Age");
         const attrUniqVals = this.state.attrUniqVals[headerIndex];
 		let ageIndex = 0;
@@ -345,7 +348,7 @@ interface IState {
     correctness: number;
     numSimPpl: number;
     attrUniqVals: [string, number][][];
-	birthdate: moment.Moment;
+	birthdate: dayjs.Dayjs;
 }
 
 interface IProps {
@@ -357,5 +360,5 @@ interface IProps {
     G: GaussianCopula;
     randRecord: () => string[];
     hasAge: boolean;
-	birthdate: moment.Moment;
+	birthdate: dayjs.Dayjs;
 }

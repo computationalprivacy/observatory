@@ -9,6 +9,8 @@ ctx.addEventListener('message', (data) => {
 
 	// extract training data from argument
 	const numData = data.data as number[][];
+	console.log("data:", data)
+	console.log("numData:", numData)
 
 	// train model on 1000 samples
 	const G = fit_mle(numData, 1000, ctx);

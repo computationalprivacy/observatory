@@ -2,10 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const CopyPlugin = require('copy-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
 
 
 const devMode = process.env.NODE_ENV !== 'production';
@@ -78,6 +79,7 @@ module.exports = {
 	},
 
 	plugins: [
+		new AntdDayjsWebpackPlugin(),
 		new HtmlWebpackPlugin({
 			template: path.join(__dirname, 'src', 'index.html')
 		}),
@@ -93,11 +95,11 @@ module.exports = {
 				{ from: 'static' }
 			]
 		}),
-		new ForkTsCheckerWebpackPlugin({
-			eslint: {
-				files: './src/**/*.{ts,tsx,js,jsx}' // required - same as command `eslint ./src/**/*.{ts,tsx,js,jsx} --ext .ts,.tsx,.js,.jsx`
-			}
-		}),
+		// new ForkTsCheckerWebpackPlugin({
+		// 	eslint: {
+		// 		files: './src/**/*.{ts,tsx,js,jsx}' // required - same as command `eslint ./src/**/*.{ts,tsx,js,jsx} --ext .ts,.tsx,.js,.jsx`
+		// 	}
+		// }),
 		new WorkboxWebpackPlugin.InjectManifest({
 			swSrc,
 			dontCacheBustURLsMatching: /\.[0-9a-f]{8}\./,
@@ -110,17 +112,23 @@ module.exports = {
 	],
 
 	devServer: {
+		static: {
+			directory: path.join(__dirname, "./dist")
+		},
 		compress: true,
 		port: 8080,
-		historyApiFallback: true
+		historyApiFallback: true,
+		devMiddleware: {
+			index: true,
+			mimeTypes: { phtml: 'text/html' },
+			serverSideRender: true,
+			writeToDisk: true,
+		  },
 	},
 
 	optimization: {
 		usedExports: true,
-		splitChunks: {
-			chunks: 'all'
-		},
-		minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})]
+		minimizer: [new TerserPlugin({}), new CssMinimizerPlugin({})]
 	}
 };
 

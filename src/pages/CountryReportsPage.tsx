@@ -3,7 +3,8 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 import { scalePoint, scaleLog } from 'd3-scale';
 import { range, shuffle } from 'd3-array';
 import { json } from 'd3-fetch';
-import moment from 'moment';
+import * as dayjs from 'dayjs';
+dayjs().format();
 
 import { 
     Alert,
@@ -93,7 +94,7 @@ export default class CountryReportsPage extends React.Component<
             if (this.props.location.state != null) {
 				const auxData = (this.props.location.state as { attrs: number[], birthdate: string });
                 const attrs = auxData.attrs; 
-				const birthdate = auxData.birthdate === '' ? null : moment(auxData.birthdate, 'YYYY-MM-DD');
+				const birthdate = auxData.birthdate === '' ? null : dayjs(auxData.birthdate, 'YYYY-MM-DD');
                 const countryIndex = attrs.shift();
                 this.chooseCountry(undefined, countryIndex, attrs, birthdate);
             } else {
@@ -107,7 +108,7 @@ export default class CountryReportsPage extends React.Component<
         iso3?: string,
         countryIndex?: number,
         attrs?: number[],
-		birthdate?: moment.Moment
+		birthdate?: dayjs.Dayjs
     ): void => {
         let country: Country = null;
         if (iso3 != null) {
@@ -257,7 +258,7 @@ export default class CountryReportsPage extends React.Component<
 
     // when birthdate is selected, choose the closest age that is present
     // (if that particular age is not present in country's dataset)
-    birthdateSelected = (date: moment.Moment, _: string): void => {
+    birthdateSelected = (date: dayjs.Dayjs, _: string): void => {
         const headerIndex = this.state.selectedHeaders.findIndex((header) => header === "Age");
         const attrUniqValsMap = this.state.attrUniqValsMap[headerIndex];
 		let ageIndex = 0;
@@ -438,10 +439,11 @@ export default class CountryReportsPage extends React.Component<
                     {state.selectedHeaders.map((header, hindex, _) => (
                         state.hasAge && header === "Age" ?
                         <DatePicker
+                            key={hindex}
                             onChange={this.birthdateSelected}
                             value={state.birthdate}
                             placeholder={'Select birthdate'}
-                            defaultPickerValue={moment('01-01-1990', 'DD-MM-YYYY')}
+                            defaultPickerValue={dayjs('01-01-1990', 'DD-MM-YYYY')}
                             bordered={state.birthdate != null}
                             style={{
                                 marginBottom: '15px',
@@ -450,6 +452,7 @@ export default class CountryReportsPage extends React.Component<
                             }}
                         /> :
                         <Select
+                            key={hindex}
                             showSearch
                             filterOption={(input, option) =>
                                 option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
@@ -619,7 +622,7 @@ interface IState {
     attrUniqValsMap: [string, number][][];
     hasAge: boolean;
     selectedHeaders: string[];
-    birthdate: moment.Moment;
+    birthdate: dayjs.Dayjs;
     correctness: number;
     numSimPpl: number;
     openKeys: string[];

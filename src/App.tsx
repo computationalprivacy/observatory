@@ -15,7 +15,7 @@ const AboutPage = lazy(() => import('./pages/AboutPage'));
 
 import './App.less';
 
-class App extends React.Component<RouteComponentProps, unknown> {
+class App extends React.Component<RouteComponentProps> {
     pages = [
         {
             title: 'Home',

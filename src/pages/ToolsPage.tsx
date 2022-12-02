@@ -1,5 +1,5 @@
 import React from 'react';
-import { readString } from 'react-papaparse';
+import Papa from 'papaparse';
 
 import {
     Button,
@@ -193,8 +193,9 @@ export default class ToolsPage extends React.Component<unknown, IState> {
         reader.onload = (e) => {
             if (e.target != null) {
                 // parse csv from string
-                const results = readString(e.target.result as string, {
-                    header: true,
+
+                const results = Papa.parse(e.target.result as string, {
+                    header: true
                 });
 
                 if (results.data.length < 5) {
@@ -277,7 +278,7 @@ export default class ToolsPage extends React.Component<unknown, IState> {
                                 return (
                                     <Checkbox
                                         type="checkbox"
-                                        checked={this.state.selectedHeaders.has(
+                                        defaultChecked={this.state.selectedHeaders.has(
                                             headers[i]
                                         )}
                                         disabled={
@@ -427,28 +428,28 @@ export default class ToolsPage extends React.Component<unknown, IState> {
         ];
 
         const analyzeDataSteps = (
-            <Steps>
-                <Step
-                    status={state.currentPage == 0 ? 'process' : 'wait'}
-                    title="Import"
-                    icon={<UploadOutlined />}
-                />
-                <Step
-                    status={state.currentPage == 1 ? 'process' : 'wait'}
-                    title="Edit"
-                    icon={<DatabaseOutlined />}
-                />
-                <Step
-                    status={state.currentPage == 2 ? 'process' : 'wait'}
-                    title="Train"
-                    icon={<SyncOutlined spin={state.currentPage == 2} />}
-                />
-                <Step
-                    status={state.currentPage == 3 ? 'process' : 'wait'}
-                    title="Explore"
-                    icon={<LineChartOutlined />}
-                />
-            </Steps>
+            <Steps items={[
+                {
+                    status: state.currentPage == 0 ? 'process' : 'wait',
+                    title: "Import",
+                    icon: <UploadOutlined />
+                },
+                {
+                    status: state.currentPage == 1 ? 'process' : 'wait',
+                    title: "Edit",
+                    icon: <DatabaseOutlined />
+                },
+                {
+                    status: state.currentPage == 2 ? 'process' : 'wait',
+                    title: "Train",
+                    icon: <SyncOutlined spin={state.currentPage == 2} />
+                },
+                {
+                    status: state.currentPage == 3 ? 'process' : 'wait',
+                    title: "Explore",
+                    icon: <LineChartOutlined />
+                }
+            ]} />
         );
 
         const ProgressFitMle = (
@@ -502,6 +503,7 @@ export default class ToolsPage extends React.Component<unknown, IState> {
                         title={analyzeDataSteps}
                         actions={[
                             <Button
+                                key="btn-analyze-data-steps"
                                 onClick={this.nextPageClicked}
                                 disabled={state.currentPage == 2}
                                 type="primary"

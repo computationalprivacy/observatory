@@ -2,7 +2,9 @@ import React from 'react';
 import Animate from 'rc-animate';
 import ReactTooltip from 'react-tooltip';
 import { Redirect, RouteComponentProps } from 'react-router-dom';
-import moment from 'moment';
+
+import * as dayjs from 'dayjs';
+dayjs().format();
 
 import {
     Alert,
@@ -367,7 +369,7 @@ export default class IndividualRiskPage extends React.Component<
 
     // when birthdate is selected, choose the closest age that is present
     // (if that particular age is not present in country's dataset)
-    birthdateSelected = (date: moment.Moment, _: string): void => {
+    birthdateSelected = (date: dayjs.Dayjs, _: string): void => {
         const qnIndex = this.state.qns.findIndex((qn) => qn.title === "Age");
         const qn = this.state.qns[qnIndex];
         let ageVal: QuestionVal = null;
@@ -441,7 +443,7 @@ export default class IndividualRiskPage extends React.Component<
                                     onChange={this.birthdateSelected}
                                     value={this.state.birthdate}
                                     placeholder={'Select birthdate'}
-                                    defaultPickerValue={moment('01-01-1990', 'DD-MM-YYYY')}
+                                    defaultPickerValue={dayjs('01-01-1990', 'DD-MM-YYYY')}
                                     style={{
                                         marginBottom: '15px',
                                         width: '100%',
@@ -576,7 +578,7 @@ export default class IndividualRiskPage extends React.Component<
                             current={state.qnNum}
                             direction="vertical"
                             style={{ width: '46px', marginRight: '10px' }}>
-                            {state.qns.map((_, index, {}) => {
+                            {state.qns.map((_, index, __) => {
                                 return index == state.qns.length - 1 ? (
                                     <Step
                                         data-tip={state.qns[index].title}
@@ -767,7 +769,7 @@ interface IState {
     attrsCopy: number[];
     countryData: Country[];
     selectedHeaders: string[];
-    birthdate: moment.Moment;
+    birthdate: dayjs.Dayjs;
     redirect: boolean;
     tooltipContent: string;
 }

@@ -58,7 +58,7 @@ export function mutual_information_matrix(dataT: number[][]): number[][] {
             mi[i][j] = mutual_information(dataT[i], dataT[j]);
 
             // drop null, negative or NaN values
-            if (mi[i][j] == Number.NaN || mi[i][j] < Number.EPSILON) {
+            if ( isNaN(mi[i][j]) || mi[i][j] < Number.EPSILON) {
                 mi[i][j] = 0;
             }
 

@@ -1,5 +1,6 @@
 // define utility functions for calculations
 import * as math from 'mathjs';
+var _ = require('lodash');
 import Rand from 'rand-seed';
 
 // compute cholesky decomposition for positive definite matrix
@@ -33,15 +34,21 @@ export function pd_chol(A: number[][]): number[][] {
 // choose random samples from data
 export function choose_random<T>(data: T[][], n: number): T[][] {
     if (data.length > n) {
-        const indices = (math.range(0, data.length) as unknown) as number[];
-        const selected = math.pickRandom(indices, n) as number[];
-        const samples = new Array<Array<T>>(n);
+        return _.sampleSize(data, n)
+        // const indices = range(0, data.length);
+        // const selected = pickRandom(indices, n);
+        // let samples = new Array<Array<T>>(n);
+        // console.log("indices:", indices, "selected:", selected, "samples:", samples);
 
-        for (let i = 0; i < n; i++) {
-            samples[i] = data[selected[i]];
-        }
+        // console.log(indices.size(), selected.size())
+        // for (let i = 0; i < n; i++) {
+        //     let ix = selected[i]
+        //     samples[i] = data[ix];
+        //     console.log(i, ix, data[ix], samples[i])
+        // }
+        // console.log("samples:", samples);
 
-        return samples;
+        // return samples;
     }
 
     return data;
@@ -79,6 +86,7 @@ export function count_map<T extends Indexable>(column: T[]): Record<T, number> {
 
 // convert count map to map of probabilities
 export function prob_map<T extends Indexable>(column: T[]): Record<T, number> {
+    console.log("prob_map column:", column)
     const cm = count_map(column);
     const pm: Record<T, number> = {} as Record<T, number>;
 

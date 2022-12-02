@@ -5,7 +5,7 @@ import { RouteComponentProps } from 'react-router-dom';
 const { Paragraph, Title } = Typography;
 const { Panel } = Collapse;
 
-export default class AboutPage extends React.Component<RouteComponentProps, any> {
+export default class AboutPage extends React.Component<RouteComponentProps> {
     private about_us = createRef<HTMLDivElement>();
 
     componentDidMount(): void {
